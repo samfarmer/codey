@@ -1,0 +1,29 @@
+<application>
+
+<name>codey</name>
+<author>Sam Farmer</author>
+<version>1</version>
+<email>sam@samfarmer.com</email>	
+<description>Provides a code runner</description>	
+<license>license.html</license>
+
+	
+<menucontributions>
+	<contribution target="projectview">
+		<menu name="codey">
+			<action name="Code time" handlerid="default" showresponse="true"></action>
+		</menu>
+	</contribution>
+</menucontributions>
+
+<viewcontributions>
+	<view id="codeyView" title="codey" icon="handlers/icon_016.png" handlerid="default">
+	</view>
+</viewcontributions>
+	
+	<handlers>
+		<handler id="default" type="cfm" filename="index.cfm" />
+	</handlers>
+
+</application>
+
