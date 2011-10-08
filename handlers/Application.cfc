@@ -1,8 +1,9 @@
-﻿<cfcomponent>
+<cfcomponent>
 <cfsetting showdebugoutput="false">
 <cffunction name="onRequestStart">
+	
 	<cfscript>
-	if ( len( cgi.HTTPS ) ) {
+	if ( len( cgi.HTTPS ) && cgi.HTTPS != "off" ) {
 		request.ideUrl = "https://" & cgi.HTTP_HOST & ":" & cgi.SERVER_PORT_SECURE;
 	} else {
 		request.ideUrl = "http://" & cgi.HTTP_HOST & ":" & cgi.SERVER_PORT;
